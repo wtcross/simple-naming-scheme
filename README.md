@@ -1,9 +1,7 @@
 # Simple Naming Scheme
 > A simple naming scheme for developers.
 
-**Please create an issue if something needs clarification or submit a PR with an improvement.**
-
-Having a naming scheme for all resources for a project is a must. This document outlines a simple scheme that seems to work well.
+Having a naming scheme for all resources for a project is a must. This document outlines a simple scheme that seems to work well. Let's converge on something awesome.
 
 Global uniqueness of a name may or may not be important in some cases. Sometimes it's a requirement when using domain names and sometimes it's for convenience. For example, if there are multiple projects with multiple repos in one GitHub account.
 
@@ -48,3 +46,6 @@ Here are some example resources and their names:
 Using this naming scheme for domains actually removes the need to purchase an expensive wildcard cert for a project and each of its environments.
   
 Other than defining each part of the name a separator needs to be picked. Above the separator is a hyphen. If you need to be able to parse names, in logs for example, then take that into consideration when picking the separator.
+
+### Collaboration
+If there are any questions that need clarification create an issue. If your goal is to improve the naming scheme then please submit a PR!
