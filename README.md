@@ -3,7 +3,26 @@
 
 Having a naming scheme for all resources for a project is a must. This document outlines a simple scheme that seems to work well. Let's converge on something awesome.
 
+## Goals
+Constructed names should be:
+
+- DNS-compatible
+- easy to read
+- expressive
+- sortable
+
+To make things really simple, just use a hyphen as a separator. This will be better explained.
+
+## Tradeoffs
+
+- DNS-compatibility limits the valid character set
+- using hyphens as separators
+  - makes this a potentially ambiguous grammar that can't be parsed reliably
+  - makes the names super easy to read! (spinal-case)
+
 Global uniqueness of a name may or may not be important in some cases. Sometimes it's a requirement when using domain names and sometimes it's for convenience. For example, if there are multiple projects with multiple repos in one GitHub account.
+
+## Naming
 
 The bits of information (parts) that can be used to name something are:
 - company name (ex: acme)
@@ -17,7 +36,7 @@ The scheme looks like this with (in general) least-to-most-specific going left-t
 
 `company-project-environment-role-location-index`
 
-The least-to-most-specific order makes resource names sort together.
+The least-to-most-specific order makes resource names sort together. We can leave off parts of the name as long as other resources of the same type do the same (ex: AWS security groups).
 
 **Scenario:**
 Acme Corp has a billing service with multiple environments, each in multiple locations.
@@ -44,8 +63,6 @@ Here are some example resources and their names:
     - `billing.acme-corp.com`
 
 Using this naming scheme for domains actually removes the need to purchase an expensive wildcard cert for a project and each of its environments.
-  
-Other than defining each part of the name a separator needs to be picked. Above the separator is a hyphen. If you need to be able to parse names, in logs for example, then take that into consideration when picking the separator.
 
 ### Collaboration
 If there are any questions that need clarification create an issue. If your goal is to improve the naming scheme then please submit a PR!
